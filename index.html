@@ -45,9 +45,7 @@
         body { font-family: 'Montserrat', sans-serif; }
         
         .hero-bg {
-            /* Fons base fosc per si la teva imatge és transparent */
             background-color: #1a1a1a; 
-            /* Canvia 'fondo-inicio.png' per la teva imatge */
             background-image: url('fondo-inicio.png'); 
             background-size: cover;
             background-position: center;
@@ -60,7 +58,6 @@
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #EF3324, #F37021);
         }
-        /* Hide scrollbar for tables */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
@@ -87,12 +84,11 @@
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="#el-club" class="text-gray-700 hover:text-brand-red font-semibold transition">El Club</a>
                     <a href="#oferta" class="text-gray-700 hover:text-brand-red font-semibold transition">Oferta Esportiva</a>
+                    <a href="#actualitat" class="text-gray-700 hover:text-brand-red font-semibold transition">Actualitat</a>
                     <a href="#marques" class="text-gray-700 hover:text-brand-red font-semibold transition">Millors Marques</a>
                     <a href="#galeria" class="text-gray-700 hover:text-brand-red font-semibold transition">Galeria</a>
                     <a href="#patrocinadors" class="text-gray-700 hover:text-brand-red font-semibold transition">Patrocinadors</a>
                     <a href="#faq" class="text-gray-700 hover:text-brand-red font-semibold transition">FAQ's</a>
-                    <a href="#contacte" class="text-gray-700 hover:text-brand-red font-semibold transition">Contacte</a>
-                    <!-- Botó Inscriure'm que porta a Contacte -->
                     <a href="#contacte" class="bg-gradient-to-r from-brand-red to-brand-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition transform flex items-center">
                         <i class="fa-solid fa-person-swimming mr-2"></i> Inscriure'm
                     </a>
@@ -106,16 +102,15 @@
             </div>
         </div>
         <!-- Menú Mòbil -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl z-40">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#el-club" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">El Club</a>
                 <a href="#oferta" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Oferta Esportiva</a>
+                <a href="#actualitat" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Actualitat</a>
                 <a href="#marques" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Millors Marques</a>
                 <a href="#galeria" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Galeria</a>
                 <a href="#patrocinadors" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Patrocinadors</a>
                 <a href="#faq" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">FAQ's</a>
-                <a href="#contacte" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Contacte</a>
-                <!-- Botó Inscriure'm mòbil que porta a Contacte -->
                 <a href="#contacte" class="block text-center mt-4 bg-brand-red text-white px-3 py-3 rounded-md font-bold">Inscriure'm Ara</a>
             </div>
         </div>
@@ -129,13 +124,12 @@
                 Club Natació <span class="text-brand-orange">Sueca</span>
             </h1>
             <p class="text-xl md:text-3xl font-light mb-8 italic">"Coratge abans que por, força abans que debilitat, viatge abans que destí."</p>
-            <!-- Botó Inscriure'm que porta a Contacte -->
             <a href="#contacte" class="inline-block bg-brand-red text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold shadow-[0_0_20px_rgba(239,51,36,0.6)] hover:bg-red-700 hover:scale-105 transition-all duration-300">
                 INSCRIU-TE ARA!
             </a>
         </div>
 
-        <!-- Junta Directiva amb Tresorer/a -->
+        <!-- Junta Directiva -->
         <div class="max-w-6xl mx-auto px-4 mt-16 z-10 w-full pb-10" data-aos="fade-up" data-aos-delay="200">
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white text-center shadow-2xl">
                 <h3 class="text-2xl font-bold mb-4 border-b border-white/30 pb-2 inline-block">Junta Directiva</h3>
@@ -265,31 +259,31 @@
                             <tbody>
                                 <tr class="border-b even:bg-gray-50 hover:bg-red-50 transition">
                                     <td class="p-4 text-brand-red font-bold text-center">Grup Roig</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00</span><br></td>
+                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span><br></td>
                                     <td class="p-4 text-gray-600 text-sm">FUNdaments: Iniciació, primers passos i tècnica bàsica.</td>
                                     <td class="p-4 text-gray-800 font-semibold">0€</td>
                                 </tr>
                                 <tr class="border-b even:bg-gray-50 hover:bg-yellow-50 transition">
                                     <td class="p-4 text-yellow-500 font-bold text-center">Grup Groc</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00</span><br></td>
+                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span><br></td>
                                     <td class="p-4 text-gray-600 text-sm">Aprendre a entrenar: Consolidació d'estils.</td>
                                     <td class="p-4 text-gray-800 font-semibold">0€</td>
                                 </tr>
                                 <tr class="border-b even:bg-gray-50 hover:bg-green-50 transition">
                                     <td class="p-4 text-green-600 font-bold text-center">Grup Verd</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00</span></td>
+                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00-00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
                                     <td class="p-4 text-gray-600 text-sm">Entrenar per a entrenar: Rendiment i tecnificació.</td>
                                     <td class="p-4 text-gray-800 font-semibold">0€</td>
                                 </tr>
                                 <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
                                     <td class="p-4 text-brand-blue font-bold text-center">Grup Blau</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00</span></td>
+                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00-00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
                                     <td class="p-4 text-gray-600 text-sm">Entrenar per a competir: Rendiment competitiu.</td>
                                     <td class="p-4 text-gray-800 font-semibold">0€</td>
                                 </tr>
                                 <tr class="border-b even:bg-gray-50 hover:bg-gray-100 transition">
                                     <td class="p-4 text-gray-400 font-bold text-center">Màster</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dt, Dj i Dv <br><span class="text-gray-500 text-sm">00:00</span></td>
+                                    <td class="p-4 text-gray-700 font-medium">Dt, Dj i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
                                     <td class="p-4 text-gray-600 text-sm">Salut, tècnica i competició.</td>
                                     <td class="p-4 text-gray-800 font-semibold">0€</td>
                                 </tr>
@@ -374,41 +368,73 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Calendari Interactiu -->
-            <div class="max-w-3xl mx-auto mt-16" data-aos="fade-up">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-800 border-b-2 border-brand-blue pb-2 inline-block">Calendari d'esdeveniments</h3>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                    <!-- Capçalera Calendari -->
-                    <div class="flex justify-between items-center bg-brand-blue p-4 text-white">
-                        <button id="prevMonth" class="hover:bg-blue-600 p-2 rounded transition" aria-label="Mes anterior"><i class="fa-solid fa-chevron-left"></i></button>
-                        <h3 id="monthYear" class="font-bold text-lg capitalize"></h3>
-                        <button id="nextMonth" class="hover:bg-blue-600 p-2 rounded transition" aria-label="Mes següent"><i class="fa-solid fa-chevron-right"></i></button>
+    <!-- NOVA SECCIÓ: NOTÍCIES I ACTUALITAT -->
+    <section id="actualitat" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Notícies i <span class="gradient-text">Actualitat</span></h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Segueix el dia a dia del club a les nostres xarxes i consulta els pròxims esdeveniments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+                
+                <!-- Instagram Feed -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-orange pb-2 inline-block"><i class="fa-brands fa-instagram mr-2"></i> Últimes Notícies</h3>
+                    
+                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-4 h-full min-h-[400px] flex flex-col justify-center items-center text-center">
+                        
+                        <!-- AÇÒ ÉS EL PLACEHOLDER PER AL WIDGET D'INSTAGRAM -->
+                        <div class="elfsight-app-TU-ID-AQUI w-full"></div>
+                        <!-- FI DEL PLACEHOLDER -->
+
+                        <i class="fa-brands fa-instagram text-5xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-500 mb-6">Ací apareixeran automàticament les teues últimes publicacions d'Instagram.</p>
+                        <a href="https://www.instagram.com/clubnataciosueca/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-bold shadow hover:shadow-lg transition transform hover:scale-105">
+                            Veure el nostre Instagram
+                        </a>
                     </div>
-                    <!-- Dies de la setmana -->
-                    <div class="p-4 pb-0">
-                        <div class="grid grid-cols-7 gap-1 text-center font-bold text-gray-500 mb-2 text-sm">
-                            <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
+                </div>
+
+                <!-- Calendari Interactiu -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-blue pb-2 inline-block"><i class="fa-regular fa-calendar-days mr-2"></i> Calendari d'Esdeveniments</h3>
+                    
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                        <!-- Capçalera Calendari -->
+                        <div class="flex justify-between items-center bg-brand-blue p-4 text-white">
+                            <button id="prevMonth" class="hover:bg-blue-600 p-2 rounded transition" aria-label="Mes anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                            <h3 id="monthYear" class="font-bold text-lg capitalize"></h3>
+                            <button id="nextMonth" class="hover:bg-blue-600 p-2 rounded transition" aria-label="Mes següent"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
-                        <!-- Quadrícula de dies -->
-                        <div id="calendarDays" class="grid grid-cols-7 gap-2 text-center text-sm mb-4"></div>
-                    </div>
-                    <!-- Llista d'esdeveniments del mes -->
-                    <div class="bg-gray-50 p-4 border-t border-gray-100">
-                        <h4 class="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wider">Esdeveniments del mes</h4>
-                        <ul id="eventList" class="space-y-3">
-                            <!-- Esdeveniments injectats via JS -->
-                        </ul>
+                        <!-- Dies de la setmana -->
+                        <div class="p-4 pb-0">
+                            <div class="grid grid-cols-7 gap-1 text-center font-bold text-gray-500 mb-2 text-sm">
+                                <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
+                            </div>
+                            <!-- Quadrícula de dies -->
+                            <div id="calendarDays" class="grid grid-cols-7 gap-2 text-center text-sm mb-4"></div>
+                        </div>
+                        <!-- Llista d'esdeveniments del mes -->
+                        <div class="bg-gray-50 p-4 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wider">Esdeveniments del mes</h4>
+                            <ul id="eventList" class="space-y-3">
+                                <!-- Esdeveniments injectats via JS -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Secció: Millors Marques -->
-    <section id="marques" class="py-20 bg-white border-t border-gray-100">
+    <section id="marques" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Millors <span class="text-brand-orange">Marques</span></h2>
@@ -426,7 +452,7 @@
                                 <th class="p-4 font-semibold border-b border-blue-400">Prova</th>
                                 <th class="p-4 font-semibold border-b border-blue-400">Temps</th>
                                 <th class="p-4 font-semibold border-b border-blue-400">Esportista</th>
-                                <th class="p-4 font-semibold border-b border-blue-400">Any Naiximent</th>
+                                <th class="p-4 font-semibold border-b border-blue-400">Any Naix.</th>
                                 <th class="p-4 font-semibold border-b border-blue-400">Data</th>
                                 <th class="p-4 font-semibold border-b border-blue-400">Lloc</th>
                             </tr>
@@ -434,33 +460,33 @@
                         <tbody class="text-gray-700">
                             <!-- Lliure -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Estil Lliure</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50L</td><td class="p-3 font-bold text-brand-red">26.82</td><td class="p-3">JORGE NAVARRO C.</td><td class="p-3">2003</td><td class="p-3">25/02/2023</td><td class="p-3">Xativa</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100L</td><td class="p-3 font-bold text-brand-red">57.25</td><td class="p-3">JORGE NAVARRO C.</td><td class="p-3">2003</td><td class="p-3">13/05/2023</td><td class="p-3">Oliva</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200L</td><td class="p-3 font-bold text-brand-red">02:06.56</td><td class="p-3">JORGE NAVARRO C.</td><td class="p-3">2003</td><td class="p-3">01/05/2022</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">400L</td><td class="p-3 font-bold text-brand-red">04:23.99</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">800L</td><td class="p-3 font-bold text-brand-red">09:29.98</td><td class="p-3">ALFRED PIQUERES V.</td><td class="p-3">2001</td><td class="p-3">01/05/2022</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">1500L</td><td class="p-3 font-bold text-brand-red">18:18.69</td><td class="p-3">ALFRED PIQUERES V.</td><td class="p-3">2001</td><td class="p-3">27/03/2022</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50L</td><td class="p-3 font-bold text-brand-red">26.82</td><td class="p-3">JORGE NAVARRO CASAÑ</td><td class="p-3">2003</td><td class="p-3">25/02/2023</td><td class="p-3">Xativa</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100L</td><td class="p-3 font-bold text-brand-red">57.25</td><td class="p-3">JORGE NAVARRO CASAÑ</td><td class="p-3">2003</td><td class="p-3">13/05/2023</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200L</td><td class="p-3 font-bold text-brand-red">02:06.56</td><td class="p-3">JORGE NAVARRO CASAÑ</td><td class="p-3">2003</td><td class="p-3">01/05/2022</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">400L</td><td class="p-3 font-bold text-brand-red">04:23.99</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">800L</td><td class="p-3 font-bold text-brand-red">09:29.98</td><td class="p-3">ALFRED PIQUERES VIVAR</td><td class="p-3">2001</td><td class="p-3">01/05/2022</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">1500L</td><td class="p-3 font-bold text-brand-red">18:18.69</td><td class="p-3">ALFRED PIQUERES VIVAR</td><td class="p-3">2001</td><td class="p-3">27/03/2022</td><td class="p-3">Gandia</td></tr>
                             <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">3000L</td><td class="p-3 font-bold text-brand-red">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td></tr>
                             <!-- Esquena -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Esquena</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50E</td><td class="p-3 font-bold text-brand-red">34.08</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">24/06/2023</td><td class="p-3">Elche</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100E</td><td class="p-3 font-bold text-brand-red">01:11.16</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">12/02/2023</td><td class="p-3">Torrent</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200E</td><td class="p-3 font-bold text-brand-red">02:35.98</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">20/05/2023</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50E</td><td class="p-3 font-bold text-brand-red">34.08</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">24/06/2023</td><td class="p-3">Elche</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100E</td><td class="p-3 font-bold text-brand-red">01:11.16</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">12/02/2023</td><td class="p-3">Torrent</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200E</td><td class="p-3 font-bold text-brand-red">02:35.98</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">20/05/2023</td><td class="p-3">Gandia</td></tr>
                             <!-- Braça -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Braça</td></tr>
                             <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50B</td><td class="p-3 font-bold text-brand-red">34.25</td><td class="p-3">NICOLAS RUINI</td><td class="p-3">1997</td><td class="p-3">12/04/2025</td><td class="p-3">Xativa</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100B</td><td class="p-3 font-bold text-brand-red">01:18.84</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200B</td><td class="p-3 font-bold text-brand-red">03:07.03</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">15/01/2023</td><td class="p-3">Xativa</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100B</td><td class="p-3 font-bold text-brand-red">01:18.84</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200B</td><td class="p-3 font-bold text-brand-red">03:07.03</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">15/01/2023</td><td class="p-3">Xativa</td></tr>
                             <!-- Papallona -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Papallona</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50M</td><td class="p-3 font-bold text-brand-red">27.41</td><td class="p-3">JORGE NAVARRO C.</td><td class="p-3">2003</td><td class="p-3">13/05/2023</td><td class="p-3">Oliva</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100M</td><td class="p-3 font-bold text-brand-red">01:05.89</td><td class="p-3">ALEX JULIO A.</td><td class="p-3">1995</td><td class="p-3">18/01/2025</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200M</td><td class="p-3 font-bold text-brand-red">03:10.84</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">50M</td><td class="p-3 font-bold text-brand-red">27.41</td><td class="p-3">JORGE NAVARRO CASAÑ</td><td class="p-3">2003</td><td class="p-3">13/05/2023</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100M</td><td class="p-3 font-bold text-brand-red">01:05.89</td><td class="p-3">ALEX JULIO ALEIXANDRE</td><td class="p-3">1995</td><td class="p-3">18/01/2025</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200M</td><td class="p-3 font-bold text-brand-red">03:10.84</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">21/05/2023</td><td class="p-3">Betera</td></tr>
                             <!-- Estils -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Estils Individuals</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100X</td><td class="p-3 font-bold text-brand-red">01:10.91</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">20/05/2023</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200X</td><td class="p-3 font-bold text-brand-red">02:40.98</td><td class="p-3">JOEL MARTINEZ T.</td><td class="p-3">2009</td><td class="p-3">04/06/2022</td><td class="p-3">Benimamet</td></tr>
-                            <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">400X</td><td class="p-3 font-bold text-brand-red">05:47.16</td><td class="p-3">IZAN MENDEZ I.</td><td class="p-3">2009</td><td class="p-3">05/06/2022</td><td class="p-3">Benimamet</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">100X</td><td class="p-3 font-bold text-brand-red">01:10.91</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">20/05/2023</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">200X</td><td class="p-3 font-bold text-brand-red">02:40.98</td><td class="p-3">JOEL MARTINEZ TORMO</td><td class="p-3">2009</td><td class="p-3">04/06/2022</td><td class="p-3">Benimamet</td></tr>
+                            <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-3 pl-6 font-medium">400X</td><td class="p-3 font-bold text-brand-red">05:47.16</td><td class="p-3">IZAN MENDEZ IRANZO</td><td class="p-3">2009</td><td class="p-3">05/06/2022</td><td class="p-3">Benimamet</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -476,7 +502,7 @@
                                 <th class="p-4 font-semibold border-b border-orange-400">Prova</th>
                                 <th class="p-4 font-semibold border-b border-orange-400">Temps</th>
                                 <th class="p-4 font-semibold border-b border-orange-400">Esportista</th>
-                                <th class="p-4 font-semibold border-b border-orange-400">Any Naiximent</th>
+                                <th class="p-4 font-semibold border-b border-orange-400">Any Naix.</th>
                                 <th class="p-4 font-semibold border-b border-orange-400">Data</th>
                                 <th class="p-4 font-semibold border-b border-orange-400">Lloc</th>
                             </tr>
@@ -484,33 +510,33 @@
                         <tbody class="text-gray-700">
                             <!-- Lliure -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Estil Lliure</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50L</td><td class="p-3 font-bold text-brand-red">30.40</td><td class="p-3">MARIA VIÑOLES N.</td><td class="p-3">2000</td><td class="p-3">24/10/2015</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100L</td><td class="p-3 font-bold text-brand-red">01:11.85</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200L</td><td class="p-3 font-bold text-brand-red">02:43.50</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">07/12/2025</td><td class="p-3">Oliva</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">400L</td><td class="p-3 font-bold text-brand-red">05:36.80</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">31/01/2026</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">800L</td><td class="p-3 font-bold text-brand-red">11:41.05</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50L</td><td class="p-3 font-bold text-brand-red">30.40</td><td class="p-3">MARIA VIÑOLES NADAL</td><td class="p-3">2000</td><td class="p-3">24/10/2015</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100L</td><td class="p-3 font-bold text-brand-red">01:11.85</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200L</td><td class="p-3 font-bold text-brand-red">02:43.50</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">07/12/2025</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">400L</td><td class="p-3 font-bold text-brand-red">05:36.80</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">31/01/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">800L</td><td class="p-3 font-bold text-brand-red">11:41.05</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
                             <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">1500L</td><td class="p-3 font-bold text-brand-red">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td></tr>
                             <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">3000L</td><td class="p-3 font-bold text-brand-red">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td><td class="p-3">-</td></tr>
                             <!-- Esquena -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Esquena</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50E</td><td class="p-3 font-bold text-brand-red">36.10</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100E</td><td class="p-3 font-bold text-brand-red">01:20.57</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">07/03/2026</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200E</td><td class="p-3 font-bold text-brand-red">03:05.70</td><td class="p-3">IRENE GALVE B.</td><td class="p-3">2013</td><td class="p-3">04/10/2025</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50E</td><td class="p-3 font-bold text-brand-red">36.10</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100E</td><td class="p-3 font-bold text-brand-red">01:20.57</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">07/03/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200E</td><td class="p-3 font-bold text-brand-red">03:05.70</td><td class="p-3">IRENE GALVE BALDOVI</td><td class="p-3">2013</td><td class="p-3">04/10/2025</td><td class="p-3">Gandia</td></tr>
                             <!-- Braça -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Braça</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50B</td><td class="p-3 font-bold text-brand-red">41.54</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100B</td><td class="p-3 font-bold text-brand-red">01:37.17</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200B</td><td class="p-3 font-bold text-brand-red">03:25.91</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">07/03/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50B</td><td class="p-3 font-bold text-brand-red">41.54</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100B</td><td class="p-3 font-bold text-brand-red">01:37.17</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200B</td><td class="p-3 font-bold text-brand-red">03:25.91</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">07/03/2026</td><td class="p-3">Gandia</td></tr>
                             <!-- Papallona -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Papallona</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50M</td><td class="p-3 font-bold text-brand-red">38.83</td><td class="p-3">GEMA COLECHA L.</td><td class="p-3">2013</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100M</td><td class="p-3 font-bold text-brand-red">01:30.92</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">11/01/2026</td><td class="p-3">Alzira</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200M</td><td class="p-3 font-bold text-brand-red">03:22.91</td><td class="p-3">IRENE GALVE B.</td><td class="p-3">2013</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">50M</td><td class="p-3 font-bold text-brand-red">38.83</td><td class="p-3">GEMA COLECHA LOPEZ</td><td class="p-3">2013</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100M</td><td class="p-3 font-bold text-brand-red">01:30.92</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">11/01/2026</td><td class="p-3">Alzira</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200M</td><td class="p-3 font-bold text-brand-red">03:22.91</td><td class="p-3">IRENE GALVE BALDOVI</td><td class="p-3">2013</td><td class="p-3">17/05/2026</td><td class="p-3">Oliva</td></tr>
                             <!-- Estils -->
                             <tr class="border-b bg-gray-50"><td colspan="6" class="p-2 font-bold text-brand-dark bg-gray-200 uppercase text-xs tracking-wider">Estils Individuals</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100X</td><td class="p-3 font-bold text-brand-red">01:26.37</td><td class="p-3">CARMEN CEBOLLA P.</td><td class="p-3">2000</td><td class="p-3">29/10/2016</td><td class="p-3">Gandia</td></tr>
-                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200X</td><td class="p-3 font-bold text-brand-red">03:02.78</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
-                            <tr class="even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">400X</td><td class="p-3 font-bold text-brand-red">06:27.30</td><td class="p-3">NOA LOPEZ L.</td><td class="p-3">2014</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">100X</td><td class="p-3 font-bold text-brand-red">01:26.37</td><td class="p-3">CARMEN CEBOLLA PASTOR</td><td class="p-3">2000</td><td class="p-3">29/10/2016</td><td class="p-3">Gandia</td></tr>
+                            <tr class="border-b even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">200X</td><td class="p-3 font-bold text-brand-red">03:02.78</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">18/04/2026</td><td class="p-3">Gandia</td></tr>
+                            <tr class="even:bg-orange-50 hover:bg-orange-100 transition"><td class="p-3 pl-6 font-medium">400X</td><td class="p-3 font-bold text-brand-red">06:27.30</td><td class="p-3">NOA LOPEZ LOZANO</td><td class="p-3">2014</td><td class="p-3">26/04/2026</td><td class="p-3">Alzira</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -519,7 +545,7 @@
     </section>
 
     <!-- Secció: Galeria -->
-    <section id="galeria" class="py-20 bg-gray-100">
+    <section id="galeria" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">La Nostra <span class="gradient-text">Galeria</span></h2>
@@ -550,7 +576,7 @@
     </section>
 
     <!-- Secció: Patrocinadors -->
-    <section id="patrocinadors" class="py-16 bg-white border-y border-gray-100">
+    <section id="patrocinadors" class="py-16 bg-gray-50 border-y border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-xl font-bold text-gray-400 uppercase tracking-wider mb-8" data-aos="fade-in">Els Nostres Patrocinadors Oficials</h3>
             <div class="flex flex-wrap justify-center items-center gap-10 md:gap-20" data-aos="fade-up">
@@ -565,7 +591,7 @@
     </section>
 
     <!-- Secció: Preguntes Freqüents -->
-    <section id="faq" class="py-20 bg-brand-light">
+    <section id="faq" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Preguntes <span class="gradient-text">Freqüents</span></h2>
@@ -614,7 +640,7 @@
     </section>
 
     <!-- Secció: Contacte -->
-    <section id="contacte" class="py-20 bg-white">
+    <section id="contacte" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div data-aos="fade-right">
@@ -670,7 +696,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 Club Natació Sueca. Tots els drets reservats.</p>
-                <p class="mt-2 md:mt-0">Dissenyat amb <i class="fa-solid fa-heart text-brand-red"></i> per a la natació (by:Alfred P.V.).</p>
+                <p class="mt-2 md:mt-0">Dissenyat amb <i class="fa-solid fa-heart text-brand-red"></i> per a la natació. (by:Alfred P.V)</p>
             </div>
         </div>
     </footer>
@@ -681,6 +707,9 @@
     </button>
 
     <!-- Scripts -->
+    <!-- Important: Afegeix l'script del teu widget d'Instagram ací si fas servir Elfsight o similar -->
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Inicialitzar animacions AOS
@@ -751,7 +780,7 @@
         const prevMonthBtn = document.getElementById('prevMonth');
         const nextMonthBtn = document.getElementById('nextMonth');
 
-        let currentDate = new Date(2026, 6); // Inicialitzat a Juliol 2026 (mes actual en l'exemple)
+        let currentDate = new Date(2026, 6); // Inicialitzat a Juliol 2026
 
         // Dades d'esdeveniments (Pots afegir o modificar ací)
         const eventsData = [
