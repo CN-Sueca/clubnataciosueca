@@ -64,8 +64,8 @@
         /* Calendar Styles */
         .calendar-day { cursor: pointer; transition: all 0.2s; }
         .calendar-day:hover { background-color: #f3f4f6; }
-        .has-event { background-color: #EF3324 !important; color: white !important; font-weight: bold; border-radius: 9999px; }
-        .has-event:hover { background-color: #dc2626 !important; }
+        .has-event { background-color: #EF3324 !important; color: white !important; font-weight: bold; border-radius: 9999px; box-shadow: 0 4px 6px -1px rgba(239, 51, 36, 0.3); }
+        .has-event:hover { background-color: #dc2626 !important; transform: scale(1.1); }
     </style>
 </head>
 <body class="bg-brand-light text-grey-800 antialiased selection:bg-brand-red selection:text-white relative">
@@ -74,12 +74,18 @@
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" aria-label="Inici">
-                        <img class="h-14 w-auto rounded-full shadow-sm" src="logo_cns.jpeg" alt="Logo Club Natació Sueca">
-                    </a>
-                </div>
+                <!-- Logo i Nom (Modificat) -->
+				<div class="flex-shrink-0 flex items-center">
+					<a href="#" aria-label="Inici" class="flex items-center gap-3 group">
+						<!-- El texto ahora está primero y alineado a la derecha -->
+						<div class="flex flex-col text-right hidden sm:flex">
+							<span class="font-bold text-gray-800 leading-tight">Club Natació</span>
+							<span class="font-bold text-brand-orange leading-tight">Sueca</span>
+						</div>
+						<!-- La imagen ahora está después -->
+						<img class="h-14 w-auto rounded-full shadow-sm group-hover:scale-105 transition" src="logo_cns.jpeg" alt="Logo Club Natació Sueca">
+					</a>
+				</div>
                 <!-- Menú Desktop -->
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="#el-club" class="text-gray-700 hover:text-brand-red font-semibold transition">El Club</a>
@@ -348,9 +354,9 @@
 
             <!-- Entrenadors -->
             <h3 class="text-2xl font-bold text-center text-gray-800 mb-8" data-aos="fade-up">Cos Tècnic</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-8 mb-16 max-w-4xl mx-auto">
                 <!-- Entrenador 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="0">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center hover:-translate-y-2 transition duration-300 max-w-lg mx-auto">
                     <img src="entrenador1.jpg" alt="Entrenador Principal" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h4 class="font-bold text-xl text-gray-900">Alfred P.V.</h4>
@@ -358,20 +364,11 @@
                         <p class="text-gray-600 text-sm">Nadador d'aigües obertes<br> Graduat en CAFiE (o casi)<br> Entrenador N2 FNCV</p>
                     </div>
                 </div>
-                <!-- Entrenador 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="entrenador2.jpg" alt="Entrenadora Categories Base" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-gray-900">Entrenador 2</h4>
-                        <p class="text-brand-orange font-semibold text-sm mb-3">Entrenador auxiliar</p>
-                        <p class="text-gray-600 text-sm">(TEXT ACÍ).</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- NOVA SECCIÓ: NOTÍCIES I ACTUALITAT -->
+    <!-- NOVA SECCIÓ: NOTÍCIES I ACTUALITAT (Vertical Moficada) -->
     <section id="actualitat" class="py-20 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -380,13 +377,14 @@
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Segueix el dia a dia del club a les nostres xarxes i consulta els pròxims esdeveniments.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+            <!-- Estructura Vertical -->
+            <div class="flex flex-col items-center gap-16" data-aos="fade-up">
                 
-                <!-- Instagram Feed -->
-                <div>
+                <!-- Instagram Feed (A dalt) -->
+                <div class="w-full max-w-4xl">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-orange pb-2 inline-block"><i class="fa-brands fa-instagram mr-2"></i> Últimes Notícies</h3>
                     
-                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-4 h-full min-h-[400px] flex flex-col justify-center items-center text-center">
+                    <div class="bg-gray-50 rounded-xl shadow-md border border-gray-200 p-4 min-h-[400px] flex flex-col justify-center items-center text-center">
                         
                         <!-- AÇÒ ÉS EL PLACEHOLDER PER AL WIDGET D'INSTAGRAM -->
                         <div class="elfsight-app-TU-ID-AQUI w-full"></div>
@@ -400,8 +398,8 @@
                     </div>
                 </div>
 
-                <!-- Calendari Interactiu -->
-                <div>
+                <!-- Calendari Interactiu (A baix) -->
+                <div class="w-full max-w-4xl">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-blue pb-2 inline-block"><i class="fa-regular fa-calendar-days mr-2"></i> Calendari d'Esdeveniments</h3>
                     
                     <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
@@ -419,12 +417,13 @@
                             <!-- Quadrícula de dies -->
                             <div id="calendarDays" class="grid grid-cols-7 gap-2 text-center text-sm mb-4"></div>
                         </div>
-                        <!-- Llista d'esdeveniments del mes -->
+                        <!-- Llista d'esdeveniments -->
                         <div class="bg-gray-50 p-4 border-t border-gray-100">
                             <h4 class="font-bold text-gray-800 mb-3 text-sm uppercase tracking-wider">Esdeveniments del mes</h4>
                             <ul id="eventList" class="space-y-3">
                                 <!-- Esdeveniments injectats via JS -->
                             </ul>
+                            <p class="text-xs text-gray-400 mt-4 text-center italic">* Fes clic sobre els dies marcats (en roig) per a veure els detalls.</p>
                         </div>
                     </div>
                 </div>
@@ -620,19 +619,19 @@
                         </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600">
-                        Sí. El CNS es tracta d'un club esportiu i fomentem la competició com a mitjà de superació personal. (Excepte categoria màster)
+                        Sí. El CNS es tracta d'un club esportiu i fomentem la competició com a mitjà de superació personal.
                     </div>
                 </details>
                 <details class="group bg-white rounded-lg shadow-sm border border-gray-200 [&_summary::-webkit-details-marker]:hidden">
 					<summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-medium">
-                        <h2 class="font-bold text-lg">La quota del club és mensual o anual?</h2>
+                        <h2 class="font-bold text-lg">Com es realitzen els pagaments de les quotes?</h2>
                         <span class="relative size-5 shrink-0">
                             <i class="fa-solid fa-plus absolute inset-0 opacity-100 group-open:opacity-0 transition"></i>
                             <i class="fa-solid fa-minus absolute inset-0 opacity-0 group-open:opacity-100 transition"></i>
                         </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600">
-                        La quota de soci és anual. Encara que el seu import puga fraccionar-se en diversos pagaments al llarg de l'any, segons acorde la Junta Directiva, no es tracta de mensualitats independents, sinó del pagament fraccionat d'una única quota anual. A més, els nous socis hauran d'abonar la matrícula d'alta corresponent i la llicència federativa, l'import de la qual s'estableix cada temporada d'acord amb les condicions fixades per la federació competent.
+                        La quota és una quota anual que es paga en 9 mensualitats i es gestiona per domiciliació bancària. A més, els nous socis hauran d'abonar la matrícula d'alta corresponent. A banda, cada temporada s'ha de pagar la llicència federativa, l'import de la qual l'estableix la federació de natació.
                     </div>
                 </details>
             </div>
@@ -669,11 +668,18 @@
                     </ul>
 
                     <div class="flex items-center">
-                        <a href="https://www.instagram.com/clubnataciosueca/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-400 text-white rounded-full flex items-center justify-center text-xl mr-4 shadow-sm hover:bg-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
-						<p class="text-gray-600">  @clubnataciosueca</p>
+                        <a href="https://www.instagram.com/clubnataciosueca/" target="_blank" rel="noopener noreferrer" class="flex items-center group">
+                            <!-- Icono -->
+                            <div class="w-12 h-12 bg-gray-400 text-white rounded-full flex items-center justify-center text-xl mr-4 shadow-sm group-hover:bg-brand-red transition">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <!-- Texto -->
+                            <span class="text-gray-600 group-hover:text-brand-red transition">@clubnataciosueca</span>
+                        </a>
                     </div>
-                </div>
+                </div> <!-- Este es el div que ya tenías y que cierra la columna izquierda -->
                 
+                <!-- Columna del Mapa (Intacta) -->
                 <div data-aos="fade-left" class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                     <iframe 
                         src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=ca&amp;q=Piscina%20municipal%20Vicent%20vera%20sueca&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
@@ -705,6 +711,19 @@
     <button id="btn-back-to-top" type="button" class="fixed bottom-5 right-5 p-3 rounded-full bg-brand-red text-white shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-red-700 hover:scale-110 z-50" aria-label="Tornar a dalt">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+    <!-- Modal d'Esdeveniments del Calendari (Finestreta oculta) -->
+    <div id="eventModal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
+        <div class="bg-white p-8 rounded-2xl max-w-md w-full shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-red transition" aria-label="Tancar"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div class="text-brand-red mb-3"><i class="fa-regular fa-calendar-check text-4xl"></i></div>
+            <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-1"></h3>
+            <p class="text-sm text-brand-orange font-semibold mb-4"><i class="fa-solid fa-clock mr-1"></i> <span id="modalDate"></span></p>
+            <p id="modalDesc" class="text-gray-600 mb-6 leading-relaxed"></p>
+            <p class="text-sm text-gray-500 mb-8"><i class="fa-solid fa-location-dot mr-1"></i> <span id="modalLocation"></span></p>
+            <button onclick="closeModal()" class="w-full bg-brand-red text-white py-3 rounded-xl font-bold shadow-md hover:bg-red-700 hover:scale-[1.02] transition">D'acord</button>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <!-- Important: Afegeix l'script del teu widget d'Instagram ací si fas servir Elfsight o similar -->
@@ -773,18 +792,46 @@
         const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // --- CALENDARI INTERACTIU ---
+        // --- CALENDARI INTERACTIU I MODAL ---
         const calendarDays = document.getElementById('calendarDays');
         const monthYearText = document.getElementById('monthYear');
         const eventList = document.getElementById('eventList');
         const prevMonthBtn = document.getElementById('prevMonth');
         const nextMonthBtn = document.getElementById('nextMonth');
 
+        // Funció per obrir i tancar la finestreta (Modal)
+        function openModal(title, date, desc, location) {
+            // Formatejar data a DD/MM/AAAA
+            const dateObj = new Date(date);
+            const formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+            
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDate').innerText = formattedDate;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalLocation').innerText = location;
+            document.getElementById('eventModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('eventModal').classList.add('hidden');
+        }
+
         let currentDate = new Date(2026, 6); // Inicialitzat a Juliol 2026
 
-        // Dades d'esdeveniments (Pots afegir o modificar ací)
+        // *** DADES D'ESDEVENIMENTS (EDITA ACÍ FÀCILMENT) ***
         const eventsData = [
-            { date: '2026-09-07', title: 'Inici Temporada', location: 'Sueca' },
+            { 
+                date: '2026-09-07', 
+                title: 'Inici de Temporada', 
+                desc: 'Tornem als entrenaments! Primera presa de contacte amb l\'aigua. Us hi esperem a tots.',
+                location: 'Piscina Municipal Vicent Vera, Sueca' 
+            },
+            { 
+                date: '2026-09-15', 
+                title: 'test2', 
+                desc: 'test2.',
+                location: 'test2' 
+            }
         ];
 
         const monthNames = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"];
@@ -827,10 +874,12 @@
                 
                 // Comprovar si hi ha esdeveniment
                 const currentDateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-                const hasEvent = eventsData.some(event => event.date === currentDateString);
+                const eventForDay = eventsData.find(event => event.date === currentDateString);
 
-                if (hasEvent) {
+                if (eventForDay) {
                     dayDiv.classList.add('has-event');
+                    // Obrir modal al fer clic al dia del calendari
+                    dayDiv.onclick = () => openModal(eventForDay.title, eventForDay.date, eventForDay.desc, eventForDay.location);
                 }
 
                 calendarDays.appendChild(dayDiv);
@@ -843,7 +892,9 @@
                 monthEvents.forEach(event => {
                     const eventDate = new Date(event.date);
                     const li = document.createElement('li');
-                    li.classList.add('flex', 'items-start', 'bg-white', 'p-3', 'rounded-lg', 'shadow-sm', 'border', 'border-gray-100');
+                    li.classList.add('flex', 'items-start', 'bg-white', 'p-3', 'rounded-lg', 'shadow-sm', 'border', 'border-gray-100', 'cursor-pointer', 'hover:border-brand-red', 'transition');
+                    // Obrir modal al fer clic a la llista d'esdeveniments
+                    li.onclick = () => openModal(event.title, event.date, event.desc, event.location);
                     li.innerHTML = `
                         <div class="bg-brand-light text-brand-red rounded-lg p-2 text-center min-w-[50px] mr-3">
                             <span class="block text-[10px] font-bold uppercase">${monthNames[eventDate.getMonth()].substring(0,3)}</span>
