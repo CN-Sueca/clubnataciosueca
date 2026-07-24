@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS (Framework) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -92,6 +92,8 @@
                     <a href="#actualitat" class="text-gray-700 hover:text-brand-red font-semibold transition">Actualitat</a>
                     <a href="#marques" class="text-gray-700 hover:text-brand-red font-semibold transition">Rècords</a>
                     <a href="#galeria" class="text-gray-700 hover:text-brand-red font-semibold transition">Galeria</a>
+                    <!-- Enllaç Equipació -->
+                    <a href="equipacion.html" class="text-gray-700 hover:text-brand-red font-semibold transition">Equipació</a>
                     <a href="#patrocinadors" class="text-gray-700 hover:text-brand-red font-semibold transition">Patrocini</a>
                     <a href="#faq" class="text-gray-700 hover:text-brand-red font-semibold transition">FAQ</a>
                     <a href="#contacte" class="text-gray-700 hover:text-brand-red font-semibold transition">Contacte</a>
@@ -119,6 +121,8 @@
                 <a href="#actualitat" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Actualitat</a>
                 <a href="#marques" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Rècords</a>
                 <a href="#galeria" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Galeria</a>
+                <!-- Enllaç Equipació Mòbil -->
+                <a href="equipacion.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Equipació</a>
                 <a href="#patrocinadors" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Patrocini</a>
                 <a href="#faq" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">FAQ</a>
                 <a href="#contacte" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Contacte</a>
@@ -136,9 +140,18 @@
                 Club Natació <span class="text-brand-orange">Sueca</span>
             </h1>
             <p class="text-xl md:text-3xl font-bold mb-8 italic">"Coratge abans que por, força abans que debilitat, viatge abans que destí."</p>
-            <a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="inline-block bg-brand-red text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold shadow-[0_0_20px_rgba(239,51,36,0.6)] hover:bg-red-700 hover:scale-105 transition-all duration-300">
-                INSCRIU-TE ARA!
-            </a>
+            
+            <!-- Botons crida a l'acció (Inscripció + Equipació) -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
+                <a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="inline-block bg-brand-red text-white text-lg md:text-xl px-10 py-4 rounded-full font-bold shadow-[0_0_20px_rgba(239,51,36,0.6)] hover:bg-red-700 hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                    INSCRIU-TE ARA!
+                </a>
+				<!--TEMPORALMENT DESACTIVAT
+                <a href="equipacion.html" class="inline-block bg-white text-brand-red border-2 border-white text-lg md:text-xl px-10 py-4 rounded-full font-bold shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                    <i class="fa-solid fa-shirt mr-2"></i> VEURE EQUIPACIÓ
+                </a>
+				TEMPORALMENT DESACTIVAT-->
+            </div>
         </div>
 
         <!-- Junta Directiva -->
@@ -242,135 +255,308 @@
         </div>
     </section>
 
-    <!-- Secció: Oferta Esportiva -->
-    <section id="oferta" class="py-20 bg-gray-50">
+    <!-- NOVA Secció: Oferta Esportiva (Redissenyada) -->
+    <section id="oferta" class="py-20 bg-[#f8f9fa] border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Oferta <span class="gradient-text">Esportiva</span></h2>
-                <div class="w-24 h-1 bg-brand-orange mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Coneix els nostres grups d'entrenament, horaris i l'equip de professionals que et guiarà cap a l'èxit.</p>
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4 uppercase tracking-tight">Oferta <span class="text-brand-red">Esportiva</span></h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Coneix els nostres grups d'entrenament, horaris i l'equip de professionals que et guiarà cap a l'èxit.</p>
             </div>
 
-            <!-- Taules: Horaris i Categories -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-start" data-aos="fade-up">
-                <!-- Horaris -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="bg-brand-red p-4">
-                        <h3 class="text-white font-bold text-xl text-center"><i class="fa-regular fa-calendar text-white mr-2"></i> Horaris d'Entrenament</h3>
+            <!-- TARGETES DE GRUPS -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20" data-aos="fade-up">
+                
+                <!-- Targeta 1: Iniciació -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                        <span class="bg-orange-50 text-brand-orange text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-orange-100">Iniciació</span>
+                        <div class="flex gap-2 text-[10px] font-bold uppercase text-gray-500 items-center">
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> Roig</span>
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span> Groc</span>
+                        </div>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead>
-                                <tr class="bg-gray-100 text-gray-700 uppercase text-xs tracking-wider">
-                                    <th class="p-4 border-b font-bold">Grup</th>
-                                    <th class="p-4 border-b font-bold">Horari</th>
-                                    <th class="p-4 border-b font-bold">Objectiu</th>
-                                    <th class="p-4 border-b font-bold">Preu</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b even:bg-gray-50 hover:bg-red-50 transition">
-                                    <td class="p-4 text-brand-red font-bold text-center">Grup Roig</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span><br></td>
-                                    <td class="p-4 text-gray-600 text-sm">FUNdaments: Iniciació, primers passos i tècnica bàsica.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-yellow-50 transition">
-                                    <td class="p-4 text-yellow-500 font-bold text-center">Grup Groc</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span><br></td>
-                                    <td class="p-4 text-gray-600 text-sm">Aprendre a entrenar: Consolidació d'estils.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-green-50 transition">
-                                    <td class="p-4 text-green-600 font-bold text-center">Grup Verd</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00-00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
-                                    <td class="p-4 text-gray-600 text-sm">Entrenar per a entrenar: Rendiment i tecnificació.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-brand-blue font-bold text-center">Grup Blau</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dl, Dc i Dv <span class="text-gray-500 text-sm">00:00-00:00<br></span><br>Dt i Dj <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
-                                    <td class="p-4 text-gray-600 text-sm">Entrenar per a competir: Rendiment competitiu.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-gray-100 transition">
-                                    <td class="p-4 text-gray-400 font-bold text-center">Màster</td>
-                                    <td class="p-4 text-gray-700 font-medium">Dt, Dj i Dv <br><span class="text-gray-500 text-sm">00:00-00:00</span></td>
-                                    <td class="p-4 text-gray-600 text-sm">Salut, tècnica i competició.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-								<tr class="even:bg-gray-50 hover:bg-gray-100 transition">
-                                    <td class="p-4 text-gray-800 font-bold text-center">No presencial</td>
-                                    <td class="p-4 text-gray-700 font-medium">A distància<br></td>
-                                    <td class="p-4 text-gray-600 text-sm">Planificació competitiva de la temporada.</td>
-                                    <td class="p-4 text-gray-800 font-semibold">0€</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup base d'iniciació</h3>
+                    <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Formació base: Prebenjamí i Benjamí</p>
+
+                    <div class="space-y-6 flex-grow">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-user mr-1 text-gray-300"></i> A qui va dirigida</p>
+                            <p class="text-sm text-gray-600">Xiquets i xiquetes que ja saben surar i desplaçar-se, i volen iniciar-se en la natació com a esport reglat aprenent la tècnica base.</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-gear mr-1 text-gray-300"></i> Com funciona</p>
+                            <p class="text-sm text-gray-600">Els nadadors s'agrupen per nivells de formació (Roig i Groc). Les sessions combinen aprenentatge tècnic amb els primers passos competitius.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-clock mr-1 text-gray-300"></i> Freqüència</p>
+                                <p class="text-sm text-gray-600">3 dies a la setmana en sessions de 45 a 60 minuts.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-unlock-keyhole mr-1 text-gray-300"></i> Prova d'accés</p>
+                                <p class="text-sm text-gray-600">Sí. Realitzem una prova de nivell gratuïta per assignar el grup adequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Objectius del grup</p>
+                        <p class="text-sm text-gray-800 font-medium">Dominar els estils bàsics, aprendre a entrenar en equip i perdre la por a la competició.</p>
                     </div>
                 </div>
 
-                <!-- Categories -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="bg-brand-blue p-4">
-                        <h3 class="text-white font-bold text-xl text-center"><i class="fa-solid fa-layer-group text-white mr-2"></i> Categories per Edats</h3>
+                <!-- Targeta 2: Competició -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                        <span class="bg-red-50 text-brand-red text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-red-100">Competició</span>
+                        <div class="flex gap-2 text-[10px] font-bold uppercase text-gray-500 items-center">
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-green-500"></span> Verd</span>
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Blau</span>
+                        </div>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead>
-                                <tr class="bg-gray-100 text-gray-700 uppercase text-xs tracking-wider">
-                                    <th class="p-4 border-b font-bold">Categoria</th>
-                                    <th class="p-4 border-b font-bold">Anys (Aprox)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Prebenjamí</td>
-                                    <td class="p-4 text-gray-600 font-medium">7 - 8 anys (2019, 2018)</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Benjamí</td>
-                                    <td class="p-4 text-gray-600 font-medium">9 - 10 anys (2017, 2016)</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Aleví</td>
-                                    <td class="p-4 text-gray-600 font-medium">11 - 12 anys (2015, 2014)</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Infantil</td>
-                                    <td class="p-4 text-gray-600 font-medium">13 - 14 anys (2013, 2012)</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Júnior</td>
-                                    <td class="p-4 text-gray-600 font-medium">15 - 17 anys (2011, 2010, 2009)</td>
-                                </tr>
-                                <tr class="border-b even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Absolut</td>
-                                    <td class="p-4 text-gray-600 font-medium">+18 anys (+2008)</td>
-                                </tr>
-                                <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
-                                    <td class="p-4 text-gray-800 font-semibold">Màster</td>
-                                    <td class="p-4 text-gray-600 font-medium">+18 anys (+2008)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup de competició</h3>
+                    <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Rendiment: Aleví, Infantil, Junior i Absolut</p>
+
+                    <div class="space-y-6 flex-grow">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-user mr-1 text-gray-300"></i> A qui va dirigida</p>
+                            <p class="text-sm text-gray-600">Nadadors amb experiència prèvia que busquen millorar les seues marques i representar al club en campionats oficials.</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-gear mr-1 text-gray-300"></i> Com funciona</p>
+                            <p class="text-sm text-gray-600">Entrenaments intensius (Grups Verd i Blau) amb planificació per cicles competitius i anàlisi tècnic detallat.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-clock mr-1 text-gray-300"></i> Freqüència</p>
+                                <p class="text-sm text-gray-600">5 dies a la setmana segons el grup de rendiment.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-unlock-keyhole mr-1 text-gray-300"></i> Prova d'accés</p>
+                                <p class="text-sm text-gray-600">Sí. Es requereix un nivell tècnic avançat o acreditar temps de competició previ.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Objectius del grup</p>
+                        <p class="text-sm text-gray-800 font-medium">Classificació per a campionats autonòmics i nacionals, optimització del rendiment físic i esportiu.</p>
+                    </div>
+                </div>
+
+                <!-- Targeta 3: Màster -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                        <span class="bg-gray-100 text-gray-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-gray-200">Adults i Màster</span>
+                        <div class="flex gap-2 text-[10px] font-bold uppercase text-gray-500 items-center">
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-gray-400"></span> Gris</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup Màster</h3>
+                    <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Natació per a adults (+18 Anys)</p>
+
+                    <div class="space-y-6 flex-grow">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-user mr-1 text-gray-300"></i> A qui va dirigida</p>
+                            <p class="text-sm text-gray-600">Des d'ex-nadadors que volen tornar a competir, fins a adults que busquen un entrenament seriós per salut més enllà de la natació lliure.</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-gear mr-1 text-gray-300"></i> Com funciona</p>
+                            <p class="text-sm text-gray-600">Entrenaments dirigits per un tècnic. Existeix l'opció de competir en el circuit Màster autonòmic o simplement entrenar per manteniment.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-clock mr-1 text-gray-300"></i> Freqüència</p>
+                                <p class="text-sm text-gray-600">3 dies a la setmana.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-unlock-keyhole mr-1 text-gray-300"></i> Prova d'accés</p>
+                                <p class="text-sm text-gray-600">No requereix marca mínima, però s'ha de poder nadar diversos llargs seguits amb fluïdesa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Objectius del grup</p>
+                        <p class="text-sm text-gray-800 font-medium">Millora de la condició cardiovascular, perfeccionament de la tècnica i foment de la convivència social.</p>
+                    </div>
+                </div>
+
+                <!-- Targeta 4: No presencial -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 hover:shadow-lg transition flex flex-col h-full">
+                    <div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+                        <span class="bg-blue-50 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-blue-100">A distància</span>
+                        <div class="flex gap-2 text-[10px] font-bold uppercase text-gray-500 items-center">
+                            <span class="flex items-center gap-1 border border-gray-300 px-2 py-0.5 rounded">No Presencial</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup No Presencial</h3>
+                    <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Planificació i seguiment online</p>
+
+                    <div class="space-y-6 flex-grow">
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-user mr-1 text-gray-300"></i> A qui va dirigida</p>
+                            <p class="text-sm text-gray-600">Esportistes i nadadors que no resideixen a Sueca o que no poden assistir presencialment però volen representar al club i seguir una planificació esportiva estructurada.</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-gear mr-1 text-gray-300"></i> Com funciona</p>
+                            <p class="text-sm text-gray-600">S'ofereix seguiment i planificació competitiva de la temporada a distància, vinculant-se federativament al club.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-regular fa-clock mr-1 text-gray-300"></i> Freqüència</p>
+                                <p class="text-sm text-gray-600">Adaptada al calendari federatiu i de travessies.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1"><i class="fa-solid fa-unlock-keyhole mr-1 text-gray-300"></i> Prova d'accés</p>
+                                <p class="text-sm text-gray-600"> NO.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Objectius del grup</p>
+                        <p class="text-sm text-gray-800 font-medium">Expansió de l'equip de competició i suport metodològic a esportistes fora del municipi.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAULA D'HORARIS -->
+            <div class="mt-20" data-aos="fade-up">
+                <h3 class="text-[10px] font-bold text-brand-red uppercase tracking-widest mb-1">Quadre d'entrenaments</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 uppercase">Horaris i Grups</h2>
+                
+                <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-x-auto p-6 md:p-10 mb-16">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="text-[10px] text-gray-400 uppercase tracking-wider border-b-2 border-gray-100">
+                                <th class="pb-4 font-bold">Grup</th>
+                                <th class="pb-4 font-bold">Perfil / Nivell</th>
+                                <th class="pb-4 font-bold">Preu Mensual</th>
+                                <th class="pb-4 font-bold">Horaris</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500 shadow-sm"></span> Grup Roig</td>
+                                <td class="py-5">FUNdaments: Iniciació i tècnica bàsica.</td>
+                                <td class="py-5 font-semibold text-brand-red">0€</td>
+                                <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-yellow-400 shadow-sm"></span> Grup Groc</td>
+                                <td class="py-5">Aprendre a entrenar: Consolidació d'estils.</td>
+                                <td class="py-5 font-semibold text-brand-red">0€</td>
+                                <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500 shadow-sm"></span> Grup Verd</td>
+                                <td class="py-5">Rendiment i tecnificació.</td>
+                                <td class="py-5 font-semibold text-brand-red">0€</td>
+                                <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h <br> Dt i Dj: 00:00 - 00:00h</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500 shadow-sm"></span> Grup Blau</td>
+                                <td class="py-5">Rendiment competitiu superior.</td>
+                                <td class="py-5 font-semibold text-brand-red">0€</td>
+                                <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h <br> Dt i Dj: 00:00 - 00:00h</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-gray-400 shadow-sm"></span> Màster</td>
+                                <td class="py-5">Salut, tècnica i competició per adults.</td>
+                                <td class="py-5 font-semibold text-brand-red">0€</td>
+                                <td class="py-5 text-gray-500">Dt, Dj i Dv: 00:00 - 00:00h</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-md border border-gray-300 shadow-sm"></span> No Presencial</td>
+                                <td class="py-5">Planificació competitiva de la temporada.</td>
+                                <td class="py-5 font-semibold text-brand-red">15€</td>
+                                <td class="py-5 text-gray-500">A distància</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAULA DE CATEGORIES -->
+            <div data-aos="fade-up">
+                <h3 class="text-[10px] font-bold text-brand-red uppercase tracking-widest mb-1">Categories</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-6 uppercase">Un lloc per a cada edat</h2>
+                
+                <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-x-auto p-6 md:p-10 mb-16">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="text-[10px] text-gray-400 uppercase tracking-wider border-b-2 border-gray-100">
+                                <th class="pb-4 font-bold w-1/3">Categoria</th>
+                                <th class="pb-4 font-bold w-1/3">Edat (Aprox)</th>
+                                <th class="pb-4 font-bold w-1/3">Enfocament</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700">
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Prebenjamí</td>
+                                <td class="py-4 text-brand-red font-semibold">7 - 8 Anys (2019, 2018)</td>
+                                <td class="py-4 text-gray-500">Primers passos i tècnica base.</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Benjamí</td>
+                                <td class="py-4 text-brand-red font-semibold">9 - 10 Anys (2017, 2016)</td>
+                                <td class="py-4 text-gray-500">Consolidació d'estils.</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Aleví</td>
+                                <td class="py-4 text-brand-red font-semibold">11 - 12 Anys (2015, 2014)</td>
+                                <td class="py-4 text-gray-500">Perfeccionament competitiu.</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Infantil</td>
+                                <td class="py-4 text-brand-red font-semibold">13 - 14 Anys (2013, 2012)</td>
+                                <td class="py-4 text-gray-500">Rendiment i tecnificació.</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Júnior</td>
+                                <td class="py-4 text-brand-red font-semibold">15 - 17 Anys (2011, 2010, 2009)</td>
+                                <td class="py-4 text-gray-500">Alta competició.</td>
+                            </tr>
+                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Absolut</td>
+                                <td class="py-4 text-brand-red font-semibold">+18 Anys (+2008)</td>
+                                <td class="py-4 text-gray-500">Elit del club.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="py-4 font-extrabold text-gray-900 uppercase">Màster</td>
+                                <td class="py-4 text-brand-red font-semibold">+18 Anys (+2008)</td>
+                                <td class="py-4 text-gray-500">Salut, tècnica avançada i competició màster.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PROVA DE NIVELL CTA -->
+            <div class="bg-white rounded-[2rem] shadow-xl border border-gray-100 p-10 text-center max-w-4xl mx-auto mt-6" data-aos="zoom-in">
+                <h3 class="text-[10px] font-bold text-brand-red uppercase tracking-widest mb-2">Prova de nivell gratuïta i sense compromís</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4 uppercase">¿Com saber quin grup és l'ideal?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">Per garantir el màxim aprenentatge i la integració idònia de cada alumne a la piscina, el nostre cos tècnic realitza un test de nivell ràpid i completament gratuït. Avaluem l'estil, la soltesa i la respiració per aconsellar-te la secció perfecta.</p>
+                <a href="#contacte" class="inline-block bg-brand-red text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-red-700 hover:scale-105 transition transform uppercase tracking-wider text-sm">
+                    Contactar per a prova
+                </a>
+            </div>
+
+            <!-- Entrenadors (Mantés el mateix estil net a sota) -->
+            <div class="mt-24">
+                <h3 class="text-[10px] font-bold text-brand-red uppercase tracking-widest mb-1 text-center">L'Equip</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-10 uppercase text-center">Cos Tècnic</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-1 gap-8 max-w-lg mx-auto">
+                    <!-- Entrenador 1 -->
+                    <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden text-center hover:shadow-lg hover:-translate-y-2 transition duration-300" data-aos="fade-up">
+                        <img src="entrenador1.jpg" alt="Entrenador Principal" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h4 class="font-extrabold text-2xl text-gray-900 mb-1 uppercase">Alfred P.V.</h4>
+                            <p class="text-brand-orange font-bold text-[11px] tracking-widest uppercase mb-4">Entrenador Principal</p>
+                            <p class="text-gray-500 text-sm leading-relaxed">Nadador d'aigües obertes<br> Graduat en CAFiE (o quasi)<br> Entrenador N2 FNCV</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Entrenadors -->
-            <h3 class="text-2xl font-bold text-center text-gray-800 mb-8" data-aos="fade-up">Cos Tècnic</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-1 gap-8 mb-16 max-w-4xl mx-auto">
-                <!-- Entrenador 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center hover:-translate-y-2 transition duration-300 max-w-lg mx-auto">
-                    <img src="entrenador1.jpg" alt="Entrenador Principal" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-bold text-xl text-gray-900">Alfred P.V.</h4>
-                        <p class="text-brand-orange font-semibold text-sm mb-3">Entrenador Principal</p>
-                        <p class="text-gray-600 text-sm">Nadador d'aigües obertes<br> Graduat en CAFiE (o casi)<br> Entrenador N2 FNCV</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -386,7 +572,7 @@
             <!-- Estructura Vertical -->
             <div class="flex flex-col items-center gap-16" data-aos="fade-up">
                 
-                <!-- Instagram Feed -->
+                <!-- Instagram Feed (A dalt) -->
                 <div class="w-full max-w-4xl">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-orange pb-2 inline-block"><i class="fa-brands fa-instagram mr-2"></i> Últimes Notícies</h3>
                     
@@ -404,7 +590,7 @@
                     </div>
                 </div>
 
-                <!-- Calendari Interactiu -->
+                <!-- Calendari Interactiu (A baix) -->
                 <div class="w-full max-w-4xl">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-blue pb-2 inline-block"><i class="fa-regular fa-calendar-days mr-2"></i> Calendari d'Esdeveniments</h3>
                     
@@ -685,7 +871,7 @@
                     </div>
                 </div>
                 
-                <!-- Columna del Mapa (Intacta) -->
+                <!-- Columna del Mapa -->
                 <div data-aos="fade-left" class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                     <iframe 
                         src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=ca&amp;q=Piscina%20municipal%20Vicent%20vera%20sueca&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
@@ -718,7 +904,7 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Modal d'Esdeveniments del Calendari (Finestreta oculta) -->
+    <!-- Modal d'Esdeveniments del Calendari -->
     <div id="eventModal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
         <div class="bg-white p-8 rounded-2xl max-w-md w-full shadow-2xl relative">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-red transition" aria-label="Tancar"><i class="fa-solid fa-xmark text-xl"></i></button>
@@ -731,12 +917,66 @@
         </div>
     </div>
 
+    <!-- Modal de Promoció Especial (S'activa o desactiva des de JS) -->
+    <div id="promoModal" class="hidden fixed inset-0 bg-black/60 z-[110] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
+        <div class="bg-white p-8 rounded-2xl max-w-md w-full shadow-2xl relative text-center border-4 border-brand-orange">
+            <button onclick="closePromo()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-red transition" aria-label="Tancar"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div class="text-brand-orange mb-3"><i class="fa-solid fa-bullhorn text-5xl"></i></div>
+            <h3 id="promoTitle" class="text-2xl font-bold text-gray-900 mb-2"></h3>
+            <p id="promoDesc" class="text-gray-600 mb-6 leading-relaxed"></p>
+            <a id="promoLink" href="#" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-gradient-to-r from-brand-red to-brand-orange text-white py-3 rounded-xl font-bold shadow-md hover:scale-[1.02] transition"></a>
+            <button onclick="closePromo()" class="mt-4 text-sm text-gray-400 hover:text-gray-600 underline">No gràcies, en un altre moment</button>
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <!-- Important: Afegeix l'script del teu widget d'Instagram ací si fas servir Elfsight o similar -->
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
+        // =========================================================
+        // CONFIGURACIÓ DE LA PROMOCIÓ
+        // =========================================================
+        const ACTIVAR_PROMOCIO = true; 
+        
+        const DADES_PROMOCIO = {
+			titol: "🔥 Inici de Temporada!",
+			descripcio: `Inscriu-te ara i assegura la teua plaça per a la nova temporada.
+
+				📅Promoció especial:
+				
+				🎁 Matrícula gratuïta.
+				🎁 50 % de descompte en les dues primeres mensualitats.
+
+				Requisits de la promoció:
+				✅ Tindre entre 7 i 10 anys (2019-2016).
+				✅ Saber nadar amb autonomia (sense material auxiliar).
+				✅ Tindre nocions bàsiques de crol i esquena.
+
+				📅Valit fins al 30 de setembre.`
+,
+            enllac: "https://www.jotform.com/form/261451336129050",
+            textBoto: "Inscriure'm ara"
+        };
+
+        function closePromo() {
+            document.getElementById('promoModal').classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (ACTIVAR_PROMOCIO) {
+                document.getElementById('promoTitle').innerText = DADES_PROMOCIO.titol;
+                document.getElementById('promoDesc').innerText = DADES_PROMOCIO.descripcio;
+                document.getElementById('promoLink').href = DADES_PROMOCIO.enllac;
+                document.getElementById('promoLink').innerText = DADES_PROMOCIO.textBoto;
+                
+                setTimeout(() => {
+                    document.getElementById('promoModal').classList.remove('hidden');
+                }, 1000);
+            }
+        });
+        // =========================================================
+
         // Inicialitzar animacions AOS
         AOS.init({ once: true, offset: 50, duration: 800 });
 
@@ -805,9 +1045,7 @@
         const prevMonthBtn = document.getElementById('prevMonth');
         const nextMonthBtn = document.getElementById('nextMonth');
 
-        // Funció per obrir i tancar la finestreta (Modal)
         function openModal(title, date, desc, location) {
-            // Formatejar data a DD/MM/AAAA
             const dateObj = new Date(date);
             const formattedDate = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
             
@@ -824,7 +1062,6 @@
 
         let currentDate = new Date(2026, 6); // Inicialitzat a Juliol 2026
 
-        // *** DADES D'ESDEVENIMENTS (EDITA ACÍ FÀCILMENT) ***
         const eventsData = [
             { 
                 date: '2026-09-07', 
@@ -851,14 +1088,11 @@
             
             monthYearText.textContent = `${monthNames[month]} ${year}`;
             
-            // Primer dia del mes i nombre de dies
-            const firstDay = new Date(year, month, 1).getDay(); // 0=Dg, 1=Dl...
+            const firstDay = new Date(year, month, 1).getDay();
             const daysInMonth = new Date(year, month + 1, 0).getDate();
             
-            // Ajustar el dia de la setmana perquè comence en Dilluns (0) en comptes de Diumenge
             let firstDayAdjusted = firstDay === 0 ? 6 : firstDay - 1;
 
-            // Dies buits al principi
             for (let i = 0; i < firstDayAdjusted; i++) {
                 const emptyDiv = document.createElement('div');
                 emptyDiv.classList.add('text-transparent');
@@ -866,32 +1100,27 @@
                 calendarDays.appendChild(emptyDiv);
             }
 
-            // Filtrar esdeveniments per aquest mes
             const monthEvents = eventsData.filter(event => {
                 const eventDate = new Date(event.date);
                 return eventDate.getMonth() === month && eventDate.getFullYear() === year;
             });
 
-            // Omplir dies
             for (let i = 1; i <= daysInMonth; i++) {
                 const dayDiv = document.createElement('div');
                 dayDiv.textContent = i;
                 dayDiv.classList.add('calendar-day', 'py-1', 'rounded-full');
                 
-                // Comprovar si hi ha esdeveniment
                 const currentDateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
                 const eventForDay = eventsData.find(event => event.date === currentDateString);
 
                 if (eventForDay) {
                     dayDiv.classList.add('has-event');
-                    // Obrir modal al fer clic al dia del calendari
                     dayDiv.onclick = () => openModal(eventForDay.title, eventForDay.date, eventForDay.desc, eventForDay.location);
                 }
 
                 calendarDays.appendChild(dayDiv);
             }
 
-            // Actualitzar llista d'esdeveniments
             if (monthEvents.length === 0) {
                 eventList.innerHTML = '<li class="text-gray-500 italic text-sm">No hi ha esdeveniments programats per a aquest mes.</li>';
             } else {
@@ -899,7 +1128,6 @@
                     const eventDate = new Date(event.date);
                     const li = document.createElement('li');
                     li.classList.add('flex', 'items-start', 'bg-white', 'p-3', 'rounded-lg', 'shadow-sm', 'border', 'border-gray-100', 'cursor-pointer', 'hover:border-brand-red', 'transition');
-                    // Obrir modal al fer clic a la llista d'esdeveniments
                     li.onclick = () => openModal(event.title, event.date, event.desc, event.location);
                     li.innerHTML = `
                         <div class="bg-brand-light text-brand-red rounded-lg p-2 text-center min-w-[50px] mr-3">
@@ -926,7 +1154,6 @@
             renderCalendar();
         });
 
-        // Iniciar
         renderCalendar();
     </script>
 </body>
