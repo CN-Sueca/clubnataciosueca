@@ -68,7 +68,8 @@
         .has-event:hover { background-color: #dc2626 !important; transform: scale(1.1); }
     </style>
 </head>
-<body class="bg-brand-light text-grey-800 antialiased selection:bg-brand-red selection:text-white relative">
+<!-- AFEGIT: overflow-x-hidden per evitar el desplaçament horitzontal en mòbils -->
+<body class="bg-brand-light text-grey-800 antialiased selection:bg-brand-red selection:text-white relative overflow-x-hidden">
 
     <!-- Navegació Fixa -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
@@ -275,7 +276,7 @@
                             <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span> Groc</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup base d'iniciació</h3>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grups base d'iniciació</h3>
                     <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Formació base: Prebenjamí i Benjamí</p>
 
                     <div class="space-y-6 flex-grow">
@@ -313,7 +314,7 @@
                             <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Blau</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grup de competició</h3>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-1 uppercase">Grups de competició</h3>
                     <p class="text-brand-red text-[11px] font-bold uppercase tracking-widest mb-6">Rendiment: Aleví, Infantil, Junior i Absolut</p>
 
                     <div class="space-y-6 flex-grow">
@@ -428,7 +429,6 @@
                         <thead>
                             <tr class="text-[10px] text-gray-400 uppercase tracking-wider border-b-2 border-gray-100">
                                 <th class="pb-4 font-bold">Grup</th>
-                                <th class="pb-4 font-bold">Perfil / Nivell</th>
                                 <th class="pb-4 font-bold">Preu</th>
                                 <th class="pb-4 font-bold">Horaris</th>
                             </tr>
@@ -436,37 +436,31 @@
                         <tbody class="text-sm text-gray-700">
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500 shadow-sm"></span> Grup Roig</td>
-                                <td class="py-5">FUNdaments: Iniciació i tècnica bàsica.</td>
                                 <td class="py-5 font-semibold text-brand-red">0€</td>
                                 <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-yellow-400 shadow-sm"></span> Grup Groc</td>
-                                <td class="py-5">Aprendre a entrenar: Consolidació d'estils.</td>
                                 <td class="py-5 font-semibold text-brand-red">0€</td>
                                 <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500 shadow-sm"></span> Grup Verd</td>
-                                <td class="py-5">Entrenar per a entrenar: Rendiment i tecnificació.</td>
                                 <td class="py-5 font-semibold text-brand-red">0€</td>
                                 <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h <br> Dt i Dj: 00:00 - 00:00h</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500 shadow-sm"></span> Grup Blau</td>
-                                <td class="py-5">Entrenar per a competir: Rendiment competitiu superior.</td>
                                 <td class="py-5 font-semibold text-brand-red">0€</td>
                                 <td class="py-5 text-gray-500">Dl, Dc i Dv: 00:00 - 00:00h <br> Dt i Dj: 00:00 - 00:00h</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-gray-400 shadow-sm"></span> Màster</td>
-                                <td class="py-5">Salut, tècnica i competició per adults.</td>
                                 <td class="py-5 font-semibold text-brand-red">0€</td>
                                 <td class="py-5 text-gray-500">Dt, Dj i Dv: 00:00 - 00:00h</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition">
                                 <td class="py-5 font-extrabold text-gray-900 flex items-center gap-2"><span class="w-3 h-3 rounded-md border border-gray-300 shadow-sm"></span> No Presencial</td>
-                                <td class="py-5">Planificació competitiva de la temporada.</td>
                                 <td class="py-5 font-semibold text-brand-red">15€/mes</td>
                                 <td class="py-5 text-gray-500">A distància</td>
                             </tr>
@@ -493,32 +487,32 @@
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Prebenjamí</td>
                                 <td class="py-4 text-brand-red font-semibold">7 - 8 Anys (2019, 2018)</td>
-                                <td class="py-4 text-gray-500">Primers passos i tècnica base.</td>
+                                <td class="py-4 text-gray-500">FUNdaments: Primers passos i tècnica base.</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Benjamí</td>
                                 <td class="py-4 text-brand-red font-semibold">9 - 10 Anys (2017, 2016)</td>
-                                <td class="py-4 text-gray-500">Consolidació d'estils.</td>
+                                <td class="py-4 text-gray-500">Aprendre a entrenar: Consolidació d'estils.</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Aleví</td>
                                 <td class="py-4 text-brand-red font-semibold">11 - 12 Anys (2015, 2014)</td>
-                                <td class="py-4 text-gray-500">Perfeccionament tècnic.</td>
+                                <td class="py-4 text-gray-500">Entrenament per a entrenar: Perfeccionament tècnic.</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Infantil</td>
                                 <td class="py-4 text-brand-red font-semibold">13 - 14 Anys (2013, 2012)</td>
-                                <td class="py-4 text-gray-500">Rendiment i tecnificació.</td>
+                                <td class="py-4 text-gray-500">Entrenament per a entrenar: Rendiment i tecnificació.</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Júnior</td>
                                 <td class="py-4 text-brand-red font-semibold">15 - 17 Anys (2011, 2010, 2009)</td>
-                                <td class="py-4 text-gray-500">Alta competició.</td>
+                                <td class="py-4 text-gray-500">Entrenament per a competir.</td>
                             </tr>
                             <tr class="border-b border-gray-50 hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Absolut</td>
                                 <td class="py-4 text-brand-red font-semibold">+18 Anys (+2008)</td>
-                                <td class="py-4 text-gray-500">Èlit del club.</td>
+                                <td class="py-4 text-gray-500">Entrenament per a guanyar.</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition">
                                 <td class="py-4 font-extrabold text-gray-900 uppercase">Màster</td>
@@ -538,23 +532,6 @@
                 <a href="#contacte" class="inline-block bg-brand-red text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-red-700 hover:scale-105 transition transform uppercase tracking-wider text-sm">
                     Contactar per a prova
                 </a>
-            </div>
-
-            <!-- Entrenadors (Mantés el mateix estil net a sota) -->
-            <div class="mt-24">
-                <h3 class="text-[10px] font-bold text-brand-red uppercase tracking-widest mb-1 text-center">L'Equip</h3>
-                <h2 class="text-3xl font-extrabold text-gray-900 mb-10 uppercase text-center">Cos Tècnic</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-1 gap-8 max-w-lg mx-auto">
-                    <!-- Entrenador 1 -->
-                    <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden text-center hover:shadow-lg hover:-translate-y-2 transition duration-300" data-aos="fade-up">
-                        <img src="entrenador1.jpg" alt="Entrenador Principal" class="w-full h-64 object-cover">
-                        <div class="p-8">
-                            <h4 class="font-extrabold text-2xl text-gray-900 mb-1 uppercase">Alfred P.V.</h4>
-                            <p class="text-brand-orange font-bold text-[11px] tracking-widest uppercase mb-4">Entrenador Principal</p>
-                            <p class="text-gray-500 text-sm leading-relaxed">Nadador d'aigües obertes<br> Graduat en CAFiE (o quasi)<br> Entrenador N2 FNCV</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -823,7 +800,7 @@
                         </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600">
-                        La quota és una quota anual que es paga en 9 mensualitats i es gestiona per domiciliació bancària. A més, els nous socis hauran d'abonar la matrícula d'alta corresponent. A banda, cada temporada s'ha de pagar la llicència federativa, l'import de la qual l'estableix la federació de natació.
+                        La quota és una quota anual que es paga en 10 mensualitats i es gestiona per domiciliació bancària. A més, els nous socis hauran d'abonar la matrícula d'alta corresponent. A banda, cada temporada s'ha de pagar la llicència federativa, l'import de la qual l'estableix la federació de natació.
                     </div>
                 </details>
             </div>
@@ -1069,12 +1046,12 @@
                 desc: 'Tornem als entrenaments! Primera presa de contacte amb l\'aigua. Us hi esperem a tots.',
                 location: 'Piscina Municipal Vicent Vera, Sueca' 
             },
-            { 
-                date: '2026-09-15', 
-                title: 'test2', 
-                desc: 'test2.',
-                location: 'test2' 
-            }
+            //{ 
+            //    date: '2026-09-15', 
+            //    title: 'test2', 
+            //    desc: 'test2.',
+            //    location: 'test2' 
+            //}
         ];
 
         const monthNames = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"];
