@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Equipació oficial del Club Natació Sueca. Fes la teua comanda en línia o a la botiga.">
+    <title>Equipació - Club Natació Sueca</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Framework) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        brand: { red: '#EF3324', orange: '#F37021', blue: '#4496D2', dark: '#1a1a1a', light: '#f8f9fa' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: linear-gradient(to right, #EF3324, #F37021); }
+        .card-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="text-grey-800 antialiased selection:bg-brand-red selection:text-white relative">
+
+    <!-- Navegació Fixa (Els enllaços apunten de tornada a l'index) -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo i Nom -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" aria-label="Tornar a l'Inici" class="flex items-center gap-3 group">
+                        <div class="flex flex-col text-right hidden sm:flex">
+                            <span class="font-bold text-gray-800 leading-tight">Club Natació</span>
+                            <span class="font-bold text-brand-orange leading-tight">Sueca</span>
+                        </div>
+                        <img class="h-14 w-auto rounded-full shadow-sm group-hover:scale-105 transition" src="logo_cns.jpeg" alt="Logo Club Natació Sueca">
+                    </a>
+                </div>
+                
+                <!-- Menú Desktop Complet -->
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm xl:text-base">
+                    <a href="index.html#el-club" class="text-gray-700 hover:text-brand-red font-semibold transition">El Club</a>
+                    <a href="index.html#oferta" class="text-gray-700 hover:text-brand-red font-semibold transition">Oferta</a>
+                    <a href="index.html#actualitat" class="text-gray-700 hover:text-brand-red font-semibold transition">Actualitat</a>
+                    <a href="index.html#marques" class="text-gray-700 hover:text-brand-red font-semibold transition">Rècords</a>
+                    <a href="index.html#galeria" class="text-gray-700 hover:text-brand-red font-semibold transition">Galeria</a>
+                    <!-- Estem a Equipació, el marquem en roig -->
+                    <a href="#" class="text-brand-red font-bold border-b-2 border-brand-red">Equipació</a>
+                    <a href="index.html#patrocinadors" class="text-gray-700 hover:text-brand-red font-semibold transition">Patrocini</a>
+                    <a href="index.html#faq" class="text-gray-700 hover:text-brand-red font-semibold transition">FAQ</a>
+                    <a href="index.html#contacte" class="text-gray-700 hover:text-brand-red font-semibold transition">Contacte</a>
+                    
+                    <a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-red to-brand-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition transform flex items-center">
+                        <i class="fa-solid fa-person-swimming mr-2"></i> Inscriure'm
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-red focus:outline-none"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Mòbil Complet -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl z-40">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="index.html" class="block px-3 py-2 text-brand-red bg-red-50 rounded-md font-bold mb-2 border border-red-100"><i class="fa-solid fa-arrow-left mr-2"></i> Tornar a l'Inici</a>
+                <a href="index.html#el-club" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">El Club</a>
+                <a href="index.html#oferta" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Oferta</a>
+                <a href="index.html#actualitat" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Actualitat</a>
+                <a href="index.html#marques" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Rècords</a>
+                <a href="index.html#galeria" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Galeria</a>
+                <a href="#" class="block px-3 py-2 text-brand-red font-bold">Equipació</a>
+                <a href="index.html#patrocinadors" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Patrocini</a>
+                <a href="index.html#faq" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">FAQ</a>
+                <a href="index.html#contacte" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Contacte</a>
+                
+                <a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="block text-center mt-4 bg-brand-red text-white px-3 py-3 rounded-md font-bold shadow-md">Inscriure'm Ara</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contingut principal activable/desactivable -->
+    <main id="seccio-botiga" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <!-- Capçalera -->
+        <div class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 uppercase tracking-tight">EQUIPACIÓ <span class="text-brand-red">OFICIAL SUECA.</span></h1>
+            <p class="mt-4 text-gray-600 max-w-3xl text-lg">La nostra pell competitiva a l'aigua. Dissenyada sota els estàndards del club per a aportar màxima identitat i rendiment en cada campionat.</p>
+        </div>
+
+        <!-- Graella de Productes (8 Productes) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            
+            <!-- Producte 1 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Conjunt Complet (Xandall + Estiu)', '85€', 'Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d\'estiu (samarreta màniga curta i pantaló curt).', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Chandal" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Conjunt Complet (Xandall+Estiu)</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">85€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d'estiu (samarreta màniga curta i pantaló curt).</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Conjunt Complet (Xandall + Estiu)', '85€', 'Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d\'estiu (samarreta màniga curta i pantaló curt).', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 2 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Xandall Dues Peces', '60€', 'Xandall oficial del club de dues peces. Teixit tècnic ideal per a escalfaments i desfilades de premiació.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Chandal 2 peces" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Xandall Dues Peces</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">60€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Xandall oficial del club de dues peces. Teixit tècnic ideal per a escalfaments i desfilades de premiació.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Xandall Dues Peces', '60€', 'Xandall oficial del club de dues peces. Teixit tècnic ideal per a escalfaments i desfilades de premiació.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 3 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Jaqueta Xandall', '35€', 'Jaqueta del xandall oficial amb cremallera completa, butxaques i escut oficial.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Jaqueta" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Jaqueta Xandall</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">35€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Jaqueta del xandall oficial amb cremallera completa, butxaques i escut oficial.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Jaqueta Xandall', '35€', 'Jaqueta del xandall oficial amb cremallera completa, butxaques i escut oficial.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 4 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Pantaló Llarg', '30€', 'Pantaló llarg del xandall de passeig amb cintura ajustable i punys als turmells.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Pantalo" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Pantaló Llarg</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">30€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Pantaló llarg del xandall de passeig amb cintura ajustable i punys als turmells.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Pantaló Llarg', '30€', 'Pantaló llarg del xandall de passeig amb cintura ajustable i punys als turmells.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 5 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Samarreta Màniga Curta', '25€', 'Samarreta tècnica oficial de màniga curta, altament transpirable amb assecat ràpid.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Samarreta" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Samarreta Màniga Curta</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">25€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Samarreta tècnica oficial de màniga curta, altament transpirable amb assecat ràpid.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Samarreta Màniga Curta', '25€', 'Samarreta tècnica oficial de màniga curta, altament transpirable amb assecat ràpid.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 6 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Pantaló Curt', '15€', 'Pantaló curt de passeig tècnic lleuger i molt confortable per a períodes estivals.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Pantalo curt" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Pantaló Curt</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">15€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Pantaló curt de passeig tècnic lleuger i molt confortable per a períodes estivals.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Pantaló Curt', '15€', 'Pantaló curt de passeig tècnic lleuger i molt confortable per a períodes estivals.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 7 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Samarreta Copa 2026', '23€', 'Edició commemorativa especial Copa de Clubs 2026. Gràfics frontals i dorsals exclusius.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Samarreta copa" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Samarreta Copa 2026</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">23€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Edició commemorativa especial Copa de Clubs 2026. Gràfics frontals i dorsals exclusius.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Samarreta Copa 2026', '23€', 'Edició commemorativa especial Copa de Clubs 2026. Gràfics frontals i dorsals exclusius.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+            <!-- Producte 8 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
+                <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Banyador Bòxer', '36€', 'Banyador tipus bòxer per a entrenament i competició, amb folre interior i ajust ferm.', 'logo_cns.jpeg')">
+                    <img src="logo_cns.jpeg" alt="Banyador" class="object-contain h-full w-full transition-transform duration-500">
+                    <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
+                </div>
+                <div class="mt-5 flex justify-between items-start gap-2">
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Banyador Bòxer</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">36€</span>
+                </div>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Banyador tipus bòxer per a entrenament i competició, amb folre interior i ajust ferm.</p>
+                <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
+                    <button onclick="openProductModal('Banyador Bòxer', '36€', 'Banyador tipus bòxer per a entrenament i competició, amb folre interior i ajust ferm.', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Secció de Comandes (Com obtenir la equipació) -->
+        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-gray-100">
+            <h3 class="text-brand-red font-bold text-xs tracking-widest uppercase mb-1">Gestió de Comandes</h3>
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 uppercase">¿COM OBTINDRE LA TEUA EQUIPACIÓ?</h2>
+            
+            <p class="text-gray-600 mb-10">Per a realitzar la comanda de l'equipació del Club Natació Sueca, pots triar una d'aquestes dues opcions:</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                <!-- Opció 1: Tenda Física -->
+                <div class="border-2 border-red-50 rounded-2xl p-8 hover:border-red-200 transition">
+                    <div class="inline-block bg-red-100 text-brand-red text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide"><i class="fa-solid fa-location-dot mr-1"></i> Opció 1: Tenda Física</div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-4">TENDA OFICIAL (Per definir)</h4>
+                    <p class="text-gray-600 text-sm mb-4">Pots acudir directament a la tenda proveïdora situada a:</p>
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-center font-semibold text-gray-800 mb-4">
+                        Adreça de la tenda / Carrer
+                    </div>
+                    <p class="text-gray-500 text-xs">Allí podran ajudar-te amb les talles, productes disponibles i el procés de compra de manera presencial.</p>
+                </div>
+
+                <!-- Opció 2: Online -->
+                <div class="border-2 border-blue-50 rounded-2xl p-8 hover:border-blue-200 transition bg-gradient-to-br from-white to-blue-50/30">
+                    <div class="inline-block bg-blue-100 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide"><i class="fa-solid fa-laptop mr-1"></i> Opció 2: Comanda Online</div>
+                    <h4 class="font-bold text-gray-900 text-lg mb-4">FORMULARI DE COMANDA</h4>
+                    <p class="text-gray-600 text-sm mb-6">També pots realitzar la teua comanda còmodament a través del formulari oficial.</p>
+                    <!-- Botó preparat per a futur enllaç -->
+                    <a href="#" class="block w-full bg-brand-red text-white text-center py-4 rounded-xl font-bold hover:bg-red-700 hover:scale-[1.02] transition shadow-md">
+                        Anar al formulari oficial <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Passos -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                <h4 class="font-bold text-gray-800 mb-6 flex items-center"><i class="fa-regular fa-rectangle-list text-brand-red text-xl mr-3"></i> PASSOS PER A FER LA COMANDA ONLINE</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">1</span>
+                        <p class="text-sm text-gray-600 mt-1">Accedeix a l'enllaç del formulari web.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">2</span>
+                        <p class="text-sm text-gray-600 mt-1">Selecciona les peces de l'equipació que necessites.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">3</span>
+                        <p class="text-sm text-gray-600 mt-1">Indica la talla corresponent per a cada peça.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">4</span>
+                        <p class="text-sm text-gray-600 mt-1">Emplena les teues dades personals i de contacte.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">5</span>
+                        <p class="text-sm text-gray-600 mt-1">Revisa tota la informació abans d'enviar la comanda.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-brand-red flex items-center justify-center font-bold text-sm">6</span>
+                        <p class="text-sm text-gray-600 mt-1">Envia el formulari i espera la confirmació.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Info -->
+            <div class="mt-6 border border-gray-200 rounded-xl p-4 flex gap-4 items-start bg-white">
+                <i class="fa-solid fa-circle-info text-brand-red mt-1"></i>
+                <p class="text-sm text-gray-600">Per a qualsevol dubte sobre talles, disponibilitat o recollida, recomanem contactar directament amb la tenda proveïdora o consultar amb la junta del club.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pantalla de Botiga Desactivada -->
+    <div id="seccio-tancada" class="hidden min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
+        <i class="fa-solid fa-store-slash text-6xl text-gray-300 mb-4"></i>
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Botiga Tancada Temporalment</h2>
+        <p class="text-gray-500 max-w-md">En aquests moments el període de comandes de l'equipació està tancat. Avisarem per xarxes socials quan es torne a obrir.</p>
+        <a href="index.html" class="mt-8 bg-brand-red text-white px-6 py-2 rounded-full font-bold shadow hover:bg-red-700 transition">Tornar a l'Inici</a>
+    </div>
+
+    <!-- Modal del Producte (La Finestreta dels Detalls) -->
+    <div id="productModal" class="hidden fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity">
+        <div class="bg-white p-6 md:p-8 rounded-2xl max-w-md w-full shadow-2xl relative border-t-4 border-brand-red">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-red transition" aria-label="Tancar"><i class="fa-solid fa-xmark text-xl"></i></button>
+            
+            <div class="bg-[#f2f2f2] rounded-xl h-48 md:h-56 flex items-center justify-center p-4 mb-6 relative overflow-hidden">
+                <img id="modalProductImg" src="" alt="Imatge del Producte" class="object-contain h-full w-full">
+            </div>
+            
+            <div class="flex justify-between items-start gap-4 mb-3">
+                <h3 id="modalProductTitle" class="text-xl font-extrabold text-gray-900 uppercase leading-tight"></h3>
+                <span id="modalProductPrice" class="bg-brand-red text-white font-bold px-3 py-1 rounded text-lg whitespace-nowrap shadow-sm"></span>
+            </div>
+            
+            <p id="modalProductDesc" class="text-gray-600 text-sm leading-relaxed mb-8 border-t border-gray-100 pt-4"></p>
+            
+            <button onclick="closeProductModal()" class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-bold shadow-sm hover:bg-gray-200 hover:text-brand-red transition">Tancar Detalls</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-10 pb-8 border-t-4 border-brand-red mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 Club Natació Sueca. Tots els drets reservats.</p>
+        </div>
+    </footer>
+
+    <script>
+        // =========================================================
+        // CONFIGURACIÓ BOTIGA (Fàcilment editable)
+        // =========================================================
+        // Canvia a 'false' si vols ocultar els productes i mostrar "Tancada"
+        const BOTIGA_ACTIVA = false; 
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!BOTIGA_ACTIVA) {
+                document.getElementById('seccio-botiga').classList.add('hidden');
+                document.getElementById('seccio-tancada').classList.remove('hidden');
+                document.getElementById('seccio-tancada').classList.add('flex');
+            }
+        });
+
+        // =========================================================
+        // LÒGICA DEL MODAL DE PRODUCTES (Finestreta de detalls)
+        // =========================================================
+        function openProductModal(title, price, desc, imgSrc) {
+            document.getElementById('modalProductTitle').innerText = title;
+            document.getElementById('modalProductPrice').innerText = price;
+            document.getElementById('modalProductDesc').innerText = desc;
+            document.getElementById('modalProductImg').src = imgSrc;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Tancar el modal si fem clic fora d'ell (al fons negre)
+        document.getElementById('productModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeProductModal();
+            }
+        });
+
+        // Menú Mòbil Toggle
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        btnMenu.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
