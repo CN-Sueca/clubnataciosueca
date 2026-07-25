@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documents oficials, reglaments i autoritzacions del Club Natació Sueca.">
+    <title>Documents - Club Natació Sueca</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Framework) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        brand: { red: '#EF3324', orange: '#F37021', blue: '#4496D2', dark: '#1a1a1a', light: '#f8f9fa' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #f8f9fa; }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: linear-gradient(to right, #EF3324, #F37021); }
+    </style>
+</head>
+<body class="text-grey-800 antialiased selection:bg-brand-red selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navegació Fixa -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" aria-label="Tornar a l'Inici" class="flex items-center gap-3 group">
+                        <img class="h-14 w-auto rounded-full shadow-sm group-hover:scale-105 transition" src="logo_cns.jpeg" alt="Logo Club Natació Sueca">
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm xl:text-base">
+                    <a href="index.html#el-club" class="text-gray-700 hover:text-brand-red font-semibold transition">El Club</a>
+                    <a href="index.html#oferta" class="text-gray-700 hover:text-brand-red font-semibold transition">Oferta</a>
+                    <a href="index.html#actualitat" class="text-gray-700 hover:text-brand-red font-semibold transition">Actualitat</a>
+                    <a href="index.html#marques" class="text-gray-700 hover:text-brand-red font-semibold transition">Rècords</a>
+					<a href="#galeria" class="text-gray-700 hover:text-brand-red font-semibold transition">Galeria</a>
+                    <!-- Destquem Documents com actiu -->
+                    <a href="#" class="text-brand-red font-bold border-b-2 border-brand-red">Documents</a>
+					<a href="equipacion.html" class="text-gray-700 hover:text-brand-red font-semibold transition">Equipació</a>
+                    <a href="#patrocinadors" class="text-gray-700 hover:text-brand-red font-semibold transition">Patrocini</a>
+					<a href="#faq" class="text-gray-700 hover:text-brand-red font-semibold transition">FAQ</a>
+                    <a href="index.html#contacte" class="text-gray-700 hover:text-brand-red font-semibold transition">Contacte</a>
+					<a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-brand-red to-brand-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition transform flex items-center">
+                        <i class="fa-solid fa-person-swimming mr-2"></i> Inscriure'm
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-red focus:outline-none"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl z-40">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="index.html" class="block px-3 py-2 text-brand-red bg-red-50 rounded-md font-bold mb-2 border border-red-100"><i class="fa-solid fa-arrow-left mr-2"></i> Tornar a l'Inici</a>
+                <a href="index.html#el-club" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">El Club</a>
+                <a href="index.html#oferta" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Oferta</a>
+				<a href="#actualitat" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Actualitat</a>
+                <a href="#marques" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Rècords</a>
+                <a href="#galeria" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Galeria</a>
+                <a href="#" class="block px-3 py-2 text-brand-red font-bold">Documents</a>
+				<a href="equipacion.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Equipació</a>
+                <a href="#patrocinadors" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Patrocini</a>
+				<a href="#faq" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">FAQ</a>
+                <a href="index.html#contacte" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-brand-red rounded-md font-semibold transition">Contacte</a>
+				<a href="https://www.jotform.com/form/261451336129050" target="_blank" rel="noopener noreferrer" class="block text-center mt-4 bg-brand-red text-white px-3 py-3 rounded-md font-bold shadow-md">Inscriure'm Ara</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contingut Principal -->
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex-grow w-full">
+        
+        <!-- Capçalera -->
+        <div class="mb-12 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 uppercase tracking-tight">DOCUMENTS <span class="text-brand-red">OFICIALS.</span></h1>
+            <p class="mt-4 text-gray-600 max-w-3xl text-lg">Ací trobaràs tota la normativa, reglaments i formularis necessaris per al dia a dia del club i les competicions.</p>
+        </div>
+
+        <!-- Contenidor dels documents (Activable/Desactivable) -->
+        <div id="seccio-documents">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Document 1 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-red group-hover:text-white transition">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reglament de Règim Intern</h3>
+                    <p class="text-gray-500 text-sm mb-8 flex-grow leading-relaxed">Normativa oficial que regula el funcionament intern del club.</p>
+                    <a href="#" download class="inline-flex justify-center items-center w-full bg-gray-50 text-brand-red font-bold py-3 px-4 rounded-xl border border-gray-200 hover:border-brand-red hover:bg-brand-red hover:text-white transition group-hover:shadow-md">
+                        Descarregar <i class="fa-solid fa-download ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Document 2 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-orange-50 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-file-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Comunicat d'Accidents (Llicència)</h3>
+                    <p class="text-gray-500 text-sm mb-8 flex-grow leading-relaxed">Formulari que s'ha d'emplenar en cas d'accident esportiu durant els entrenaments o competicions oficials.</p>
+                    <a href="72148 Parte.pdf" download class="inline-flex justify-center items-center w-full bg-gray-50 text-brand-orange font-bold py-3 px-4 rounded-xl border border-gray-200 hover:border-brand-orange hover:bg-brand-orange hover:text-white transition group-hover:shadow-md">
+                        Descarregar <i class="fa-solid fa-download ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Document 3 
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-blue group-hover:text-white transition">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Autorització de Menors</h3>
+                    <p class="text-gray-500 text-sm mb-8 flex-grow leading-relaxed">Document obligatori signat pels tutors legals per als desplaçaments i la participació de menors en competicions.</p>
+                    <a href="#" download class="inline-flex justify-center items-center w-full bg-gray-50 text-brand-blue font-bold py-3 px-4 rounded-xl border border-gray-200 hover:border-brand-blue hover:bg-brand-blue hover:text-white transition group-hover:shadow-md">
+                        Descarregar <i class="fa-solid fa-download ml-2"></i>
+                    </a>
+                </div>
+				-->
+                <!-- Document 4 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="w-14 h-14 bg-gray-100 text-gray-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-gray-800 group-hover:text-white transition">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Normativa FNCV</h3>
+                    <p class="text-gray-500 text-sm mb-8 flex-grow leading-relaxed">Enllaç directe al reglament vigent de la Federació de Natació de la Comunitat Valenciana.</p>
+                    <a href="https://www.fncv.es/natacion-normativas" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center w-full bg-gray-50 text-gray-700 font-bold py-3 px-4 rounded-xl border border-gray-200 hover:border-gray-800 hover:bg-gray-800 hover:text-white transition group-hover:shadow-md">
+                        Anar a la web <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Missatge si els documents estan desactivats -->
+        <div id="missatge-buit" class="hidden min-h-[40vh] flex-col items-center justify-center text-center p-8 bg-white rounded-[2rem] border border-gray-100 shadow-sm mt-8">
+            <i class="fa-regular fa-folder-open text-6xl text-gray-200 mb-4"></i>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">No hi ha documents disponibles</h3>
+            <p class="text-gray-500">En aquests moments no hi ha cap document o formulari publicat.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-10 pb-8 border-t-4 border-brand-red w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 Club Natació Sueca. Tots els drets reservats.</p>
+        </div>
+    </footer>
+
+    <script>
+        // =========================================================
+        // CONFIGURACIÓ DOCUMENTS
+        // =========================================================
+        // Canvia a 'false' si vols amagar les targetes i mostrar "No hi ha documents"
+        const DOCUMENTS_ACTIUS = true; 
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!DOCUMENTS_ACTIUS) {
+                document.getElementById('seccio-documents').classList.add('hidden');
+                document.getElementById('missatge-buit').classList.remove('hidden');
+                document.getElementById('missatge-buit').classList.add('flex');
+            }
+        });
+
+        // Menú Mòbil Toggle
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        btnMenu.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
