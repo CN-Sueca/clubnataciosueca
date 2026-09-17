@@ -110,14 +110,14 @@
             <!-- Producte 1 -->
             <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-5 flex flex-col relative card-zoom group">
                 <div class="bg-[#f2f2f2] rounded-xl h-56 flex items-center justify-center p-4 relative overflow-hidden cursor-pointer" onclick="openProductModal('Conjunt Complet (Xandall + Estiu)', '85€', 'Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d\'estiu (samarreta màniga curta i pantaló curt).', 'logo_cns.jpeg')">
-                    <img src="logo_cns.jpeg" alt="Chandal" class="object-contain h-full w-full transition-transform duration-500">
+                    <img src="polo_cns.jpeg" alt="Chandal" class="object-contain h-full w-full transition-transform duration-500">
                     <span class="absolute bottom-2 right-2 bg-gray-500/70 text-white text-[10px] font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm"><i class="fa-solid fa-magnifying-glass mr-1"></i> VER DETALLE</span>
                 </div>
                 <div class="mt-5 flex justify-between items-start gap-2">
-                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Conjunt Complet (Xandall+Estiu)</h3>
-                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">85€</span>
+                    <h3 class="font-bold text-gray-900 text-sm leading-tight uppercase">Polo manega curta</h3>
+                    <span class="bg-red-50 text-brand-red font-bold px-2 py-1 rounded text-sm whitespace-nowrap">0€</span>
                 </div>
-                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d'estiu (samarreta màniga curta i pantaló curt).</p>
+                <p class="text-gray-500 text-xs mt-3 flex-grow leading-relaxed line-clamp-3">.</p>
                 <div class="mt-5 pt-4 border-t border-gray-100 flex justify-between items-center">
                     <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1"></i> Oficial Club</span>
                     <button onclick="openProductModal('Conjunt Complet (Xandall + Estiu)', '85€', 'Equipació oficial completa per a la temporada. Inclou xandall complet (jaqueta i pantaló llarg) i conjunt d\'estiu (samarreta màniga curta i pantaló curt).', 'logo_cns.jpeg')" class="text-brand-red text-xs font-bold uppercase hover:underline">Detalles <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
@@ -253,18 +253,18 @@
             <p class="text-gray-600 mb-10">Per a realitzar la comanda de l'equipació del Club Natació Sueca, pots triar una d'aquestes dues opcions:</p>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-                <!-- Opció 1: Tenda Física -->
+                <!--Tenda Física: (Polo, pantaló curt, Xandall i Sudadera) -->
                 <div class="border-2 border-red-50 rounded-2xl p-8 hover:border-red-200 transition">
                     <div class="inline-block bg-red-100 text-brand-red text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide"><i class="fa-solid fa-location-dot mr-1"></i> Opció 1: Tenda Física</div>
-                    <h4 class="font-bold text-gray-900 text-lg mb-4">TENDA OFICIAL (Per definir)</h4>
+                    <h4 class="font-bold text-gray-900 text-lg mb-4">ACTUAL ESPORT</h4>
                     <p class="text-gray-600 text-sm mb-4">Pots acudir directament a la tenda proveïdora situada a:</p>
                     <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-center font-semibold text-gray-800 mb-4">
-                        Adreça de la tenda / Carrer
+                        Ronda del País Valencia, 15, 46410 Sueca, Valencia
                     </div>
-                    <p class="text-gray-500 text-xs">Allí podran ajudar-te amb les talles, productes disponibles i el procés de compra de manera presencial.</p>
+                    <p class="text-gray-500 text-xs">(Xandall, Polo i Sudadera) Allí podran ajudar-te amb les talles, productes disponibles i el procés de compra de manera presencial.</p>
                 </div>
 
-                <!-- Opció 2: Online -->
+                <!-- Per comanda Online: (Banyadors, motxilla, samarreta tirants) -->
                 <div class="border-2 border-blue-50 rounded-2xl p-8 hover:border-blue-200 transition bg-gradient-to-br from-white to-blue-50/30">
                     <div class="inline-block bg-blue-100 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide"><i class="fa-solid fa-laptop mr-1"></i> Opció 2: Comanda Online</div>
                     <h4 class="font-bold text-gray-900 text-lg mb-4">FORMULARI DE COMANDA</h4>
@@ -356,7 +356,7 @@
         // CONFIGURACIÓ BOTIGA (Fàcilment editable)
         // =========================================================
         // Canvia a 'false' si vols ocultar els productes i mostrar "Tancada"
-        const BOTIGA_ACTIVA = false; 
+        const BOTIGA_ACTIVA = true; 
         
         document.addEventListener('DOMContentLoaded', () => {
             if (!BOTIGA_ACTIVA) {
